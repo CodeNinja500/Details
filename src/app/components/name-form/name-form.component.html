@@ -1,0 +1,17 @@
+<mat-card>
+  <mat-card-title>Enter you name</mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="nameForm" (ngSubmit)="onNameFormSubmitted(nameForm)">
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Name</mat-label>
+          <input matInput type="text" placeholder="Name" formControlName="name" required>
+          <mat-error *ngIf="nameForm.get('name')!.invalid">name is invalid</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <button type="submit" mat-raised-button color="primary" [disabled]="nameForm.invalid" routerLink="/name-details/{{nameForm.get('name')?.value}}">Submit</button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,11 @@
+<mat-card>
+  <mat-card-title>
+    <ng-container *ngIf="name$ | async as name">Hello {{ name }}</ng-container>
+  </mat-card-title>
+  <mat-card-content>
+    <ng-container *ngIf="gender$ | async as item"><p>{{item.gender}}</p></ng-container>
+    <ng-container *ngIf="age$ | async as item"><p>You are {{item.age}} years old</p></ng-container>
+    <ng-container *ngIf="nationality$ | async as item"><p>You are from {{item}}</p></ng-container>
+    <button type="submit" mat-raised-button color="primary" routerLink="/name-form">Go back</button>
+  </mat-card-content>
+</mat-card>

@@ -85,6 +85,11 @@
     "user-template": {
       "container": "<ng-container *ngIf=\"$detailVariable$ | async as $itemVariable$\">$content$</ng-container>",
       "content": "<h1>$firstname $lastname</h1>\n<p>$email</p>"
+    },
+    "name-details": {
+      "container": "<ng-container *ngIf=\"$detailVariable$ | async as $itemVariable$\">$content$</ng-container>",
+      "content": "<p>{{$itemVariable$}}</p>"
+
     }
   }
 }
